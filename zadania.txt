@@ -1,0 +1,36 @@
+1. Okno dialogowe
+Przygotuj komponent okna dialogowego (Dialog), który będzie się wyświetlał np. po kliknięciu w przycisk (komponent Button. Okno powinno mieć możliwość ustawienia tytułu oraz treści. Powinno zawierać też przycisk pozwalający na zamknięcie (np. czarny X lub button OK).
+
+Tips: Podejrzyj, jak może wyglądać taki komponent na podstawie Material UI: https://material-ui.com/components/dialogs/#customized-dialogs
+
+Modyfikacja
+Dodaj w oknie dwa przyciski: Confim oraz Abort. Po kliknięciu w każdy z nich powinna uruchomić się akcja (handler) przekazany z zewnątrz do tego komponentu. Na razie może to być zwykły console.log.
+
+2. Snackbar
+Przygotuj komponent Snackbar, który będzie się wyświetlał na ekranie po kliknięciu w przycisk przez określoną liczbę sekund (domyślnie 5). Będzie możliwość zmiany tej liczby poprzez propsy.
+
+Tips: Podejrzyj jak może wyglądać taki komponent na podstawie Material UI: https://material-ui.com/components/snackbars/#customized-snackbars
+
+Modyfikacja
+Zmodyfikuj komponent Snackbar tak, aby można było poprzez propsy przekazać wartość, która określi jego położenie na ekranie. Np. center-bottom wyświetli go wycentrowanego na dole, a top-right w prawym górnym rogu.
+
+Modyfikacja
+Zmodyfikuj komponent Snackbar tak, aby przyjmował typ wyświetlanej treści i na tej podstawie zmieniał kolor tła oraz fontu. Możesz wykorzystać kolory z tego przykładu: https://material-ui.com/components/snackbars/#customized-snackbars
+
+3. Menu nawigacyjne
+Napisz komponent NavMenu, który będzie pojawiał się po lewej stronie aplikacji. Komponent będzie zawierał linki nawigacyjne, domyślnie będzie ukryty.
+
+W aplikacji osadź przycisk, który będzie pozwalał na otworzenie menu (pierwszy klik) oraz zamknięcie menu (kliknięcie po raz drugi).
+
+Podobny przycisk osadź w komponencie NavMenu. Po jego kliknięciu menu będzie się ukrywało.
+
+Modyfikacja
+Za pomocą React Router DOM dodaj kilka podstron: np. /home, /about, /contact. W komponencie NavMenu za pomocą komponentów NavLink wstaw linki do tych podstron. Jeśli któraś ze stron jest aktualnie otwarta, to niech link w NavMenu podkreśla się na czerwono.
+
+4. Wyszukiwanie użytkowników
+Przygotuj listę użytkowników w formacie JSON. Umieść ją następnie w folderze public jako np. users.json. Przygotuj komponent UsersContainer, który za pomocą fetch pobierze dane z users.json, a następnie w komponencie prezentacyjnym UsersList oraz User wyświetli poszczególnego użytkownika. Następnie przygotuj komponent UserSearch - będzie to formularz z polem tekstowym, w które wpiszemy imię lub nazwisko użytkownika. Wyszukiwarka powinna się uruchomić po wciśnięciu klawisza enter. Obok dodaj przycisk Reset do wyzerowania wyszukiwania.
+
+Na liście pojawią się teraz uzytkownicy, którzy spełniają kryteria wyszukiwania.
+
+5. User profile
+Rozbudujmy zadanie #4 w taki sposób, aby użytkownicy byli dostępni pod ścieką /users, a po odszukaniu interesującego nas użytkownika móc kliknąć w komponent User. Kliknięcie spowoduje zapisanie wybranego obiektu w aplikacji (może to być nawet komponent App). Następnie korzystając z Za pomocą React Router DOM stwórz ścieżkę /user-profile. Po przejściu na tę ściekę powinniśmy widzieć szczegóły wybranego wcześniej użytkownika.
